@@ -35,7 +35,7 @@ export const Hero = () => {
           Join our 
           <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
             {" "}
-            Waitlist{" "}
+            Waiting list{" "}
           </span>
           for early access
         </h2>
