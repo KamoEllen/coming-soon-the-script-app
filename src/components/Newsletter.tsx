@@ -20,7 +20,7 @@ const Newsletter = () => {
     }
 
     emailjs
-      .send("service_rmihqvf", "template_022wjoe", values, "YOUR_USER_ID_HERE")
+      .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ")
       .then(
         (response) => {
           console.log("SUCCESS!", response);
