@@ -22,7 +22,7 @@ export const Hero = () => {
         
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0 pb-8 lg:pb-12">
-          From import to export, editing to automatic form filling, The Script App empowers you to manage scripts and continuity reports with ease, saving you time and effort.
+         From importing scripts to exporting reports and handling edits to automating form filling.The Script App respects your dedication by offering efficient management tools, saving you valuable time.
         </p>
 
        
