@@ -69,7 +69,7 @@ export const HowItWorks = () => {
          Features
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-      Where efficiency meets creativity and collaboration flows smoothly. 
+      Focus less on the admin and more on the supervising  
       </p>
 {/* Here are some of the key features that make The Script App the best choice for script supervisors. */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
