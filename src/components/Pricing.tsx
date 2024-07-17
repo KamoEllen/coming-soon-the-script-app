@@ -32,13 +32,13 @@ const pricingList: PricingProps[] = [
       "Get access to all features and tools within the first 24h.",
     buttonText: "Start Free Trial",
     benefitList: [
-      "Import scripts with ease",
-      "Create forms",
-      "Export or send via email",
+      "Import scripts or different side types with ease",
+      "Create customisable reports",
+      "Export and send via email",
       "Secure storage integration",
       "Optimized for iOS",
-      "Efficient script editing",
-      "Auto-fill repetitive fields",
+      "Efficient script editing and compare/merge amendments",
+      "Auto-fill repetitive information and calculations",
       "Real-time collaboration",
       "Track changes",
       "24/7 customer support",
@@ -61,7 +61,7 @@ export const Pricing = () => {
         Access
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Enjoy 24h free trial on us and only pay 20 pounds a month after that. Cancel anytime within the first 30 days.
+        Enjoy 24h free trial on us and only pay 20 pounds a month after that. "Cancel anytime during the first 30 days of each month.
       </h3>
       <div className="flex justify-center">
         <div className="w-full lg:w-3/4 xl:w-2/3">
