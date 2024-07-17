@@ -11,33 +11,33 @@ const features = [
   {
     icon: <CheckCheck className="text-green-500" />,
     title: "Import scripts",
-    description: "Import, edit and manage scripts. Merge amendments with The Script App. Spend more time supervising, less time on administrative tasks.",
+    description: "Import, edit and manage scripts. Merge amendments with The Script App. Spend less time on administrative tasks and more time supervising.",
   },
   {
     icon: <CheckCheck className="text-green-500" />,
     title: "Automate Form Filling",
-    description: "Automate repetitive tasks like form filling and formatting, allowing you to focus on creative aspects of script supervision.",
+    description: "Automate repetitive tasks like form filling and formatting allowing you to focus on the creative aspects of script supervision.",
   },
     // Point 1: Data is always ready for you to use at work
   {
     icon: <CheckCheck className="text-green-500" />,
     title: "Always Accessible",
-    description: "Store and access folders, photos, and reports securely from any location, ensuring your data is always ready for you to use at work.",
+    description: "Store and access folders, photos, and reports securely from any location, ensuring your data is always ready for you to use at work.Save work offline and sync when there is internet access.",
   },
   {
     icon: <CheckCheck className="text-green-500" />,
-    title: "Intuitive User Interface",
-    description: "Enjoy a user-friendly interface that enhances workflow efficiency.",
+    title: "Your documents will talk to each other",
+    description: "Daily production reports gather information from the facing pages and master breakdowns. Generate customizable editors log from information in the facing pages and export to a mailing list",
   },
   {
     icon: <CheckCheck className="text-green-500" />,
     title: "Customizable Workflow",
-    description: "Tailor the interface to your project's needs, optimizing efficiency and adapting to unique requirements.",
+    description: "Tailor the interface to your project's needs, optimizing efficiency and adapting to unique production and editor requirements.",
   },
   {
     icon: <CheckCheck className="text-green-500" />,
     title: "Real-Time Collaboration",
-    description: "Keep the units in sync throughout production. Export sides and share documents instantly to maintain clarity.",
+    description: "Keep the main and second units in sync throughout production. Update and share documents instantly to maintain clear communication.",
   },
 
 
@@ -51,7 +51,7 @@ const features = [
   {
     icon: <CheckCheck className="text-green-500" />,
     title: "Performance Tracking ",
-    description: "Gain insights into script progress with real-time change tracking.",
+    description: "No more maths! input the figures once and let The Script App calculate page counts , timings etc.",
   },
 ];
 
