@@ -6,13 +6,13 @@ export const Hero = () => {
       <div className="text-center lg:text-start space-y-6">
          <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-green-500 to-green-200 text-transparent bg-clip-text">
+            <span className="inline bg-gradient-to-r from-green-300 to-green-500 text-transparent bg-clip-text">
               Ready 
             </span>{" "}
             to  
           </h1>{" "}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-green-500 to-green-200 text-transparent bg-clip-text">
+            <span className="inline bg-gradient-to-r from-green-300 to-green-500 text-transparent bg-clip-text">
               elevate
             </span>{" "}
             your script supervision  {" "}
