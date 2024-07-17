@@ -16,7 +16,8 @@ export const Hero = () => {
               type less
             </span>{" "}
             and  {" "}
-            <span className="text-green-500 underline" >supervise more?</span>
+            <span className="text-green-500 underline" >supervise more</span>
+            ?
           </h2>
         </main>
         
