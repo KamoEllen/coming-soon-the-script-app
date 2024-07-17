@@ -6,20 +6,21 @@ export const Hero = () => {
       <div className="text-center lg:text-start space-y-6">
          <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-green-300 to-green-500 text-transparent bg-clip-text">
+            <span className="inline bg-gradient-to-r from-green-500 to-green-200 text-transparent bg-clip-text">
               Ready 
             </span>{" "}
             to  
           </h1>{" "}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-green-300 to-green-500 text-transparent bg-clip-text">
-              type less
+            <span className="inline bg-gradient-to-r from-green-500 to-green-200 text-transparent bg-clip-text">
+              elevate
             </span>{" "}
-            and  {" "}
-            <span className="text-green-500 underline" >supervise more</span>
-            ?
+            your script supervision  {" "}
+            <span className="text-green-500 underline" >experience?</span>
           </h2>
         </main>
+        
+        
         
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0 pb-8 lg:pb-12">
