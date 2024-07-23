@@ -65,10 +65,11 @@ export const Pricing = () => {
       </h3>
       <div className="flex justify-center">
         <div className="w-full lg:w-3/4 xl:w-2/3">
+          {/* drop-shadow-xl shadow-black/10 dark:shadow-white/10 */}
           <Card
             className={
               pricing.popular === PopularPlanType.YES
-                ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+                ? "bg-muted/50 "
                 : ""
             }
           >
