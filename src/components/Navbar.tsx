@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -47,13 +46,6 @@ export const Navbar = () => {
 
     return (
         <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
-            <Helmet>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Viga&display=swap"
-                    rel="stylesheet"
-                />
-            </Helmet>
-
             <NavigationMenu className="mx-auto">
                 <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between">
                     <NavigationMenuItem className="font-bold flex items-center">
@@ -96,7 +88,6 @@ export const Navbar = () => {
                                             href={href}
                                             onClick={() => setIsOpen(false)}
                                             className={buttonVariants({ variant: "ghost" })}
-                                            style={{ fontFamily: 'Viga, sans-serif' }}
                                         >
                                             {label}
                                         </a>
