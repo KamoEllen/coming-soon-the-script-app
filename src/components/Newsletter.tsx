@@ -56,7 +56,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="container bg-white py-8 sm:py-12 lg:py-18">
+    <div className="container py-8 sm:py-12 lg:py-18">
       {/*  bg-white shadow-lg  border-gray */}
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray rounded-xl p-4 ">
         {/* <div className="max-w-4xl mx-auto bg-white rounded-lg overflow-hidden border border-gray rounded-xl p-4 "> */}
