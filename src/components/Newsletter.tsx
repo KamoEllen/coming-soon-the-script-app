@@ -58,7 +58,7 @@ const Newsletter = () => {
   return (
     <div className="container py-8 sm:py-12 lg:py-18">
       {/*  bg-white shadow-lg  border-gray */}
-      <div className="max-w-4xl mx-auto bg-green-500 rounded-lg overflow-hidden border rounded-xl p-4 ">
+      <div className="max-w-4xl mx-auto bg-black rounded-lg overflow-hidden border rounded-xl p-4 ">
         {status === "SUCCESS" && (
           <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4 rounded">
             Your message was submitted successfully.
@@ -86,7 +86,7 @@ const Newsletter = () => {
             placeholder="Email"
             className="mb-6 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 focus:border-primary border-gray-300 rounded-md shadow-sm"
           />
-          <Button className="bg-white text-primary" type="submit">Join</Button>
+          <Button className="bg-primary text-secondary" type="submit">Join</Button>
         </form>
       </div>
     </div>
