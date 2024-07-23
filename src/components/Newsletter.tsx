@@ -77,7 +77,7 @@ const Newsletter = () => {
             value={values.fullName}
             onChange={handleChange}
             placeholder="Full Name"
-            className="mb-6 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 focus:border-primary border-gray-300 rounded-md shadow-sm"
+            className="mb-6  bg-white block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 focus:border-primary border-gray-300 rounded-md shadow-sm"
           />
           <Input
             type="email"
@@ -85,7 +85,7 @@ const Newsletter = () => {
             value={values.email}
             onChange={handleChange}
             placeholder="Email"
-            className="mb-6 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 focus:border-primary border-gray-300 rounded-md shadow-sm"
+            className="mb-6  bg-white block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 focus:border-primary border-gray-300 rounded-md shadow-sm"
           />
           <Button className="bg-primary text-secondary" type="submit">Join</Button>
         </form>
