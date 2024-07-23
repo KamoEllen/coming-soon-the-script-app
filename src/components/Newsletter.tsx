@@ -58,7 +58,7 @@ const Newsletter = () => {
   return (
     <div className="container py-8 sm:py-12 lg:py-18">
       {/*  bg-white shadow-lg  border-gray */}
-      <div className="max-w-4xl mx-auto bg-secondary rounded-lg overflow-hidden border border-black rounded-xl p-4 ">
+      <div className="max-w-4xl mx-auto bg-secondary rounded-lg overflow-hidden border border-black-300 rounded-xl p-4 ">
         {status === "SUCCESS" && (
           <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4 rounded">
             Your message was submitted successfully.
