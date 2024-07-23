@@ -85,7 +85,7 @@ const Newsletter = () => {
             placeholder="Email"
             className="mb-6 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 focus:border-primary border-gray-300 rounded-md shadow-sm"
           />
-          <Button type="submit">Send Message</Button>
+          <Button type="submit">Join</Button>
         </form>
       </div>
     </div>
