@@ -83,14 +83,14 @@ export const Hero = () => {
         
       <h2 className="text-3xl md:text-4xl font-bold pl-5">
           Join our 
-          <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text mb-4">
+          <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text mt-8">
             {" "}
             Waiting list{" "}
           </span>
           for early access
         </h2>
         <p className="text-sm text-center text-gray-500 mt-2 mb-4">
-                **Don't worry, we won't spam you.**
+                **Don't worry, we won't spam you!**
               </p>
       <Newsletter/>
       </div>
