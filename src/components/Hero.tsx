@@ -66,7 +66,7 @@ export const Hero = () => {
           </span>
           for early access
         </h2>
-        <p className="text-sm text-center text-green-300 mt-2 mb-4">
+        <p className="text-sm text-center text-gray-500 mt-2 mb-4">
                 **Don't worry, we won't spam you.**
               </p>
       <Newsletter/>
