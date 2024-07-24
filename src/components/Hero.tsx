@@ -60,7 +60,7 @@ export const Hero = () => {
         
       <h2 className="text-3xl md:text-4xl font-bold pl-5">
           Join our 
-          <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+          <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text mb-4">
             {" "}
             Waiting list{" "}
           </span>
