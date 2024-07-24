@@ -49,6 +49,9 @@ export const Hero = () => {
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0 pb-8 lg:pb-12">
          From importing scripts to exporting reports and handling amendments to automating form filling The Script App respects your dedication to accuracy and efficiency by offering time-saving management tools, giving you a better work/life balance.
         </p>
+        <p className="text-sm text-center text-gray-300 mt-2">
+                **Don't worry, we won't spam you.**
+              </p>
 
        
       </div>
