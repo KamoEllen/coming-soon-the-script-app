@@ -1,3 +1,51 @@
+ import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+
+const EmailForm = () => {
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setSending(true);
+    setError(null);
+
+    const serviceID = 'service_08m1wiw';
+    const templateID = 'template_8b88igj';
+
+    try {
+      await emailjs.sendForm(serviceID, templateID, event.target);
+      setSending(false);
+      alert('Sent!');
+    } catch (err) {
+      setSending(false);
+      setError(err);
+      alert(JSON.stringify(err));
+    }
+  };
+
+  return (
+    <form id="form" onSubmit={handleSubmit}>
+      <div className="field">
+        <label htmlFor="to_name">To Name</label>
+        <Input type="text" name="to_name" id="to_name" />
+      </div>
+      <Button type="submit" disabled={sending}>
+        {sending ? 'Sending...' : 'Send Email'}
+      </Button>
+      {error && <p className="error">{JSON.stringify(error)}</p>}
+    </form>
+  );
+};
+
+export default EmailForm;
+
+{/* ME- .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
+    {/* Gabi- .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC") */}
+{/*
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "./ui/button";
@@ -21,8 +69,7 @@ const Newsletter = () => {
     }
 
     setLoading(true); // Start loading
-    {/* ME- .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
-    {/* Gabi- .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC") */}
+
     emailjs
       
       
@@ -112,7 +159,9 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+*/}
 
+//
 
 {/* .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
     {/* Gabi- .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC") */} 
