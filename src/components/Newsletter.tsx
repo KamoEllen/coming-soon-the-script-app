@@ -18,9 +18,9 @@ const Newsletter = () => {
       alert("Please enter your full name and email.");
       return;
     }
-
+    {/* .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
     emailjs
-      .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ")
+      .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC")
       .then(
         (response) => {
           console.log("SUCCESS!", response);
