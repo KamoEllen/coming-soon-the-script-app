@@ -1,13 +1,13 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 
-const EmailForm = () => {
+const Newsletter: React.FC = () => {
   const [sending, setSending] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<unknown>(null);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setSending(true);
@@ -17,13 +17,13 @@ const EmailForm = () => {
     const templateID = 'template_8b88igj';
 
     try {
-      await emailjs.sendForm(serviceID, templateID, event.target);
+      await emailjs.sendForm(serviceID, templateID, event.currentTarget);
       setSending(false);
       alert('Sent!');
-    } catch (err) {
+    } catch (err: unknown) {
       setSending(false);
       setError(err);
-      alert(JSON.stringify(err));
+      alert('An error occurred: ' + JSON.stringify(err));
     }
   };
 
@@ -41,7 +41,7 @@ const EmailForm = () => {
   );
 };
 
-export default EmailForm;
+export default Newsletter;
 
 {/* ME- .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
     {/* Gabi- .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC") */}
