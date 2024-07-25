@@ -94,7 +94,7 @@ const Newsletter = () => {
             onChange={handleChange}
             placeholder="Email"
             //id="email"  Adding a unique id attribute
-            name="to_name" 
+            
             id="to_name"
             className="mb-6 bg-white block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 focus:border-primary border-gray-300 rounded-md shadow-sm"
           />
