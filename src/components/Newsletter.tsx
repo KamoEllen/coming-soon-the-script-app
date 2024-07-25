@@ -5,7 +5,7 @@ import { Input } from './ui/input';
 
 const Newsletter: React.FC = () => {
   const [sending, setSending] = useState(false);
-  const [error, setError] = useState<unknown>(null);
+  const [error, setError] = useState<Error | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -20,19 +20,21 @@ const Newsletter: React.FC = () => {
       await emailjs.sendForm(serviceID, templateID, event.currentTarget);
       setSending(false);
       alert('Sent!');
-    } catch (err: unknown) {
+    } catch (err) {
       setSending(false);
-      setError(err);
-      alert('An error occurred: ' + JSON.stringify(err));
+      if (err instanceof Error) {
+        setError(err);
+      } else {
+        setError(new Error('An unknown error occurred.'));
+      }
+      alert('An error occurred: ' + (err instanceof Error ? err.message : 'An unknown error occurred.'));
     }
   };
 
   // Helper function to convert error to a string
-  const formatError = (error: unknown): string => {
-    if (error instanceof Error) {
+  const formatError = (error: Error | null): string => {
+    if (error) {
       return error.message;
-    } else if (typeof error === 'string') {
-      return error;
     } else {
       return 'An unknown error occurred.';
     }
@@ -52,8 +54,8 @@ const Newsletter: React.FC = () => {
   );
 };
 
-
 export default Newsletter;
+
 
 {/* ME- .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
     {/* Gabi- .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC") */}
