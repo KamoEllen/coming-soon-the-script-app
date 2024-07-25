@@ -19,8 +19,10 @@ const Newsletter = () => {
       return;
     }
     {/* .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
+    {/* Gabi- .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC") */} 
     emailjs
-      .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC")
+      
+      .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ")
       .then(
         (response) => {
           console.log("SUCCESS!", response);
