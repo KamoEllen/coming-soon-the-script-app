@@ -27,6 +27,17 @@ const Newsletter: React.FC = () => {
     }
   };
 
+  // Helper function to convert error to a string
+  const formatError = (error: unknown): string => {
+    if (error instanceof Error) {
+      return error.message;
+    } else if (typeof error === 'string') {
+      return error;
+    } else {
+      return 'An unknown error occurred.';
+    }
+  };
+
   return (
     <form id="form" onSubmit={handleSubmit}>
       <div className="field">
@@ -36,10 +47,11 @@ const Newsletter: React.FC = () => {
       <Button type="submit" disabled={sending}>
         {sending ? 'Sending...' : 'Send Email'}
       </Button>
-      {error && <p className="error">{JSON.stringify(error)}</p>}
+      {error && <p className="error">{formatError(error)}</p>}
     </form>
   );
 };
+
 
 export default Newsletter;
 
