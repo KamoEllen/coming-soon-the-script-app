@@ -30,7 +30,7 @@ const Newsletter = () => {
     setError('');
     setButtonText('Sending...');
     {/* service_08m1wiw */}
-    const serviceID = 'default_service';
+    const serviceID = 'service_08m1wiw';
     const templateID = 'template_8b88igj';
 
     emailjs.sendForm(serviceID, templateID, event.currentTarget)
