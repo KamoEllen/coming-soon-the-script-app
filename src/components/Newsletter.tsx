@@ -3,6 +3,87 @@ import emailjs from '@emailjs/browser';
 
 const Newsletter = () => {
   const [buttonText, setButtonText] = useState('Send Email');
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    emailjs.init('7DJX-VaZmQXFU3_yJ');
+  }, []);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const toName = form.to_name.value.trim();
+    const toActName = form.to_act_name.value.trim();
+
+    if (!toName || !toActName) {
+      setError('Please fill in both fields.');
+      setButtonText('Send Email');
+      return;
+    }
+
+    setError(null);
+    setButtonText('Sending...');
+
+    const serviceID = 'default_service';
+    const templateID = 'template_022wjoe';
+
+    emailjs.sendForm(serviceID, templateID, form)
+      .then(() => {
+        setButtonText('Send Email');
+        alert('Sent!');
+      }, (err) => {
+        setButtonText('Send Email');
+        alert(JSON.stringify(err));
+      });
+  };
+
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+      <div className="w-full max-w-md p-6 bg-white border border-black rounded-lg shadow-md">
+        <form id="form" onSubmit={handleSubmit} className="space-y-4">
+          {error && (
+            <div className="text-red-600 text-sm mb-4">{error}</div>
+          )}
+          <div className="flex flex-col">
+            <label htmlFor="to_name" className="text-sm text-gray-700">Email</label>
+            <input 
+              type="text" 
+              name="to_name" 
+              id="to_name" 
+              className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-green-500" 
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="to_act_name" className="text-sm text-gray-700">Name</label>
+            <input 
+              type="text" 
+              name="to_act_name" 
+              id="to_act_name" 
+              className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-green-500" 
+            />
+          </div>
+          <button 
+            type="submit" 
+            id="button" 
+            className="w-full py-2 px-4 text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+          >
+            {buttonText}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Newsletter;
+
+{/*
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+
+const Newsletter = () => {
+  const [buttonText, setButtonText] = useState('Send Email');
 
   useEffect(() => {
     emailjs.init('7DJX-VaZmQXFU3_yJ');
@@ -62,6 +143,8 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+*/}
+//THE ONE ON TOP IS GREAT , doesn't have email verification
 
 {/*
 import React, { useState, useEffect } from 'react';
