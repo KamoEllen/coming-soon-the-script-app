@@ -27,7 +27,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen"> {/*  bg-gray-100 p-4 */}
+    <div > {/*className="flex justify-center items-center  min-h-screen bg-gray-100 p-4 */}
       <div className="w-full max-w-md p-6 bg-white border border-black rounded-lg shadow-md">
         <form id="form" onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
