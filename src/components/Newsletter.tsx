@@ -8,7 +8,7 @@ const Newsletter = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    emailjs.init('7DJX-VaZmQXFU3_yJ');
+    emailjs.init('4UDRjSQKlKIX9WDLC');
   }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -29,9 +29,9 @@ const Newsletter = () => {
 
     setError('');
     setButtonText('Sending...');
-
+    {/* service_08m1wiw */}
     const serviceID = 'default_service';
-    const templateID = 'template_022wjoe';
+    const templateID = 'template_8b88igj';
 
     emailjs.sendForm(serviceID, templateID, event.currentTarget)
       .then(() => {
