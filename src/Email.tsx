@@ -1,15 +1,15 @@
-import "./App.css";
+import "./Email.css";
 import { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Emaill() {
   // ... state
-  useEffect(() => emailjs.init("YOUR-PUBLIC-KEY-HERE"), []);
+  useEffect(() => emailjs.init("7DJX-VaZmQXFU3_yJ"), []);
   // Add these
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const serviceId = "YOUR-SERVICE-ID-HERE";
-    const templateId = "YOUR-TEMPLATE-ID-HERE"";
+    const serviceId = "service_rmihqvf";
+    const templateId = "template_022wjoe";
     try {
       setLoading(true);
       await emailjs.send(serviceId, templateId, {
