@@ -27,7 +27,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+    <div className="flex justify-center items-center min-h-screen"> {/*  bg-gray-100 p-4 */}
       <div className="w-full max-w-md p-6 bg-white border border-black rounded-lg shadow-md">
         <form id="form" onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
@@ -36,7 +36,7 @@ const Newsletter = () => {
               type="text" 
               name="to_name" 
               id="to_name" 
-              className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-green-500" 
             />
           </div>
           <div className="flex flex-col">
@@ -45,13 +45,13 @@ const Newsletter = () => {
               type="text" 
               name="to_act_name" 
               id="to_act_name" 
-              className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-green-500" 
             />
           </div>
           <button 
             type="submit" 
             id="button" 
-            className="w-full py-2 px-4 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full py-2 px-4 text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
           >
             {buttonText}
           </button>
