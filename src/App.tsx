@@ -1,7 +1,7 @@
 import { FAQ } from "./components/FAQ";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
-import Emaill from "./Emaill";
+
 import { HowItWorks } from "./components/HowItWorks";
 import { Navbar } from "./components/Navbar";
 import { Pricing } from "./components/Pricing";
@@ -16,9 +16,7 @@ function App() {
       <section id="home">
       <Hero />
       </section>
-      <section id="email">
-      <Emaill />
-      </section>
+      
       <section id="features">
       <HowItWorks />
       </section>
