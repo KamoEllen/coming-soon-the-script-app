@@ -29,7 +29,7 @@ const Newsletter = () => {
 
     setError('');
     setButtonText('Sending...');
-    {/* service_08m1wiw */}
+    {/* The Script App service_08m1wiw */}
     const serviceID = 'service_08m1wiw';
     const templateID = 'template_8b88igj';
 
