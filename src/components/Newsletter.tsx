@@ -1,4 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+
+// Define styles as a JavaScript object or use styled-components
+const styles = {
+  field: {
+    marginBottom: '10px',
+  },
+  label: {
+    display: 'block',
+    fontSize: '12px',
+    color: '#777',
+  },
+  input: {
+    display: 'block',
+    minWidth: '250px',
+    lineHeight: '1.5',
+    fontSize: '14px',
+  },
+  submit: {
+    display: 'block',
+    padding: '6px 30px',
+    fontSize: '14px',
+    backgroundColor: '#4460AA',
+    color: '#fff',
+    border: 'none',
+  }
+};
+
+const Newsletter = () => {
+  const [buttonText, setButtonText] = useState('Send Email');
+  
+  useEffect(() => {
+    emailjs.init('7DJX-VaZmQXFU3_yJ');
+  }, []);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    
+    setButtonText('Sending...');
+    
+    const serviceID = 'default_service';
+    const templateID = 'template_022wjoe';
+
+    emailjs.sendForm(serviceID, templateID, event.currentTarget)
+      .then(() => {
+        setButtonText('Send Email');
+        alert('Sent!');
+      }, (err) => {
+        setButtonText('Send Email');
+        alert(JSON.stringify(err));
+      });
+  };
+
+  return (
+    <form id="form" onSubmit={handleSubmit}>
+      <div style={styles.field}>
+        <label htmlFor="to_name" style={styles.label}>Email</label>
+        <input type="text" name="to_name" id="to_name" style={styles.input} />
+      </div>
+      <div style={styles.field}>
+        <label htmlFor="to_act_name" style={styles.label}>Name</label>
+        <input type="text" name="to_act_name" id="to_act_name" style={styles.input} />
+      </div>
+      <input type="submit" id="button" value={buttonText} style={styles.submit} />
+    </form>
+  );
+};
+
+export default Newsletter;
+
+{/*import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -55,7 +126,7 @@ const Newsletter: React.FC = () => {
 };
 
 export default Newsletter;
-
+*/}
 
 {/* ME- .send("service_rmihqvf", "template_022wjoe", values, "7DJX-VaZmQXFU3_yJ") */}
     {/* Gabi- .send("service_08m1wiw", "template_8b88igj", values, "4UDRjSQKlKIX9WDLC") */}
